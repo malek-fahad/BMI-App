@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:src="@drawable/bmi_img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.2"/>
+    <EditText
+        android:id="@+id/heightET"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Your Height (Ft)"
+        android:background="@drawable/input_bg"
+        android:textColor="@color/pimary"
+        android:textColorHint="@color/edtexthint"
+        android:inputType="numberDecimal"
+        android:drawableLeft="@drawable/ic_icon_height"
+        android:drawablePadding="5dp"
+        android:fontFamily="@font/aladin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:id="@+id/ftomconTV"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="1m = 3.28084Ft || Your Height is : 0m"
+        android:textSize="12sp"
+        android:textAlignment="center"
+        android:textColor="@color/edtexthint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/heightET"/>
+
+
+    <EditText
+        android:id="@+id/wightET"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Your weight (Kg)"
+        android:background="@drawable/input_bg"
+        android:textColor="@color/pimary"
+        android:textColorHint="@color/edtexthint"
+        android:inputType="numberDecimal"
+        android:drawableLeft="@drawable/ic_icon_weight"
+        android:drawablePadding="5dp"
+        android:fontFamily="@font/aladin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ftomconTV"
+        android:layout_marginTop="20dp"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/calculatebmibtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/button_bg"
+        android:fontFamily="@font/aclonica"
+        android:text="Calculate BMI"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wightET" />
+
+    <TextView
+        android:id="@+id/bmicalresultTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/aladin"
+        android:text="Results will be printed here"
+        android:textColor="@color/danger"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calculatebmibtn" />
+    <TextView
+        android:id="@+id/bmicalnoteTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="14sp"
+        android:textColor="@color/purple_700"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bmicalresultTV"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
